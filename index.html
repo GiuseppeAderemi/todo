@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="">Evergreen</a>
+                </div>
+                <div class="others">
+                    <a href="/index.html">Home</a>
+                    <a href="">Contacts</a>
+                    <a href="" id="mode">Modal</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="head">
+            <h1>Stay Organized, Stay Productive!</h1>
+            <p>Your Tasks. Your Progress.</p>
+        </div>
+
+        <div class="todo-app">
+            <h2>To-Do List <img src="Assets/check-list.png" alt=""></h2>
+            <div class="msg"></div>
+            <div class="row">
+                <input type="text" oninput="displayText(event)" id="input-box" placeholder="Add your text!">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <p id="output"></p>
+            <ul id="list-container">
+               
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copy">
+            <p>&copy;Evergreen International School 2024</p>
+        </div>
+        <div class="socials">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-youtube-play"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h2>Are you sure?</h2>
+            <p>Delete item? This action cannot be undone.</p>
+            <button class="modal-button delete-button" onclick="confirmDelete()">Delete</button>
+            <button class="modal-button cancel-button" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+    
+    
+    
+<script src="Js.js"></script>
+</body>
+</html>
